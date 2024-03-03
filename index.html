@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>安德超的秘密花园</title>
+    <!-- 浏览器标签上显示的图标 -->
+    <link rel="icon" type="image/ico" href="//sdn.geekzu.org/avatar/4cc893d113dd74ceca73f9863f2c5446/">
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="./static/style.css?v=1.2.0">
     <style>
       body {
         margin: 0;
@@ -92,7 +98,7 @@
         <a href="index.html">
         <img src="logo.jpg" width="40px" height="40px" alt="" />
         </a>
-        <div style="margin-left: 10px"><a href="index.html">老牌桔子</a></div>
+        <div style="margin-left: 10px"><a href="index.html">Home</a></div>
       </div>
       <!-- 导航栏 -->
       <div class="flex1">
@@ -105,6 +111,15 @@
         <div style="color: red; font-size: 20px; text-align: center;"><p>有容乃大</p></div>
         <div style="color: red; font-size: 20px; text-align: center;"><p>壁立千仞</p></div>
         <div style="color: red; font-size: 20px; text-align: center;"><p>无欲则刚</p></div>
+        <!-- aplayer inner -->
+        <div id="aplayer-inner" class="aplayer"></div>
+        <!-- end aplayer inner -->
+        <ul class="social mt-1">
+            <li><a href="https://weibo.com/u/6979608546"><i class="fab fa-weibo " aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/Dallas-Adc"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.zhihu.com/people/aba-ba-74"><i class="fab fa-zhihu"
+                        aria-hidden="true"></i></a></li>
+        </ul>
       </div>
     </div>
     <!-- 主区域 -->
@@ -159,10 +174,21 @@
           <!-- 列表区 -->
           <div class="flex column">
             <!-- 列表项 -->
-            <div style="height: 160px" class="baiSe mgt8 yinYing">等待更新...</div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing">
+              很荣幸您能访问我的网站！ 目前我仍在学习中，每天抽出时间来看书学习。
+            </div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing">
+              我喜欢自由自在的生活，就像在图书馆能找到一切我想找到的书，而没有人会说那些是无用的。
+              操场上跑跑步打打球，寝室窝着看看书或者玩玩手机电脑，放了假探索一下周边好吃的好玩的，
+              或者在学校走一走，看看不高山明远湖，沫溪德水，还有羽毛油亮肚子圆滚滚的麻雀，还有开得正好的花。
+              <div>这里的风格是很对我脾气的！</div>
+            </div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing">
+              我的前程未知，你的美還在高處。 
+            </div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing">
+              以傲慢与偏执，回敬傲慢与偏见。
+            </div>
             <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
             <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
           </div>
@@ -171,12 +197,12 @@
         <div style="flex: 1" class="youQu flex column mgr8 mgt8">
           <!-- 提示区 -->
           <div style="height: 150px" class="baiSe yinYing">
-            <div style="text-align: center;">今日诗词：</div>
+            <div ">今日诗词：</div>
             <!-- 今日诗词API -->
-            <!-- <span id="jinrishici-sentence">正在加载今日诗词....</span> -->
-            <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
-            <div style="text-align: center;">百尺竿头须进步，十方世界是全身</div>
-            <div style="margin-top: 60px; text-align: center;">当您踏入这片数字之海，我满心欢喜，</div>
+            <span id="jinrishici-sentence">正在加载今日诗词....</span>
+            <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+            <!-- <div style="text-align: center;">百尺竿头须进步，十方世界是全身</div> -->
+            <div style="margin-top: 55px; text-align: center;">当您踏入这片数字之海，我满心欢喜，</div>
             <div style="text-align: center;">感谢您的造访，愿诗与远方常伴您左右.</div>
           </div>
           <!-- 消息区 -->
