@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex 布局</title>
+    <title>安德超的秘密花园</title>
     <style>
       body {
         margin: 0;
@@ -44,6 +44,16 @@
         font-size: 14px;
         color: #666;
       }
+      .blinking {
+            animation: blinker 2s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
       @media (max-width:600px){
         .ceBian{
             display: none;
@@ -65,8 +75,10 @@
     </style>
   </head>
   <body class="flex">
+    <!-- 看板娘 -->
+    <div style="bottom: auto; right: auto;"><script src="https://fastly.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script></div>
     <!-- 侧边栏 -->
-    <div style="width: 200px; z-index: 2" class="ceBian baiSe yinYing">
+    <div style="width: 160px; " class="ceBian baiSe yinYing">
       <!-- 头像栏 -->
       <div
         style="
@@ -80,7 +92,7 @@
         <a href="index.html">
         <img src="logo.jpg" width="40px" height="40px" alt="" />
         </a>
-        <div style="margin-left: 10px"><a href="index.html">Welcome!</a></div>
+        <div style="margin-left: 10px"><a href="index.html">老牌桔子</a></div>
       </div>
       <!-- 导航栏 -->
       <div class="flex1">
@@ -89,12 +101,37 @@
         <div class="daoHang"><a href="wishes and plans.html">愿望与进展</a></div>
         <div class="daoHang"><a href="arts and humanities.html">人文与艺术</a></div>
         <div class="daoHang"><a href="message board.html">留言板</a></div>
+        <div style="color: red; font-size: 20px; text-align: center;"><p>海纳百川</p></div>
+        <div style="color: red; font-size: 20px; text-align: center;"><p>有容乃大</p></div>
+        <div style="color: red; font-size: 20px; text-align: center;"><p>壁立千仞</p></div>
+        <div style="color: red; font-size: 20px; text-align: center;"><p>无欲则刚</p></div>
       </div>
     </div>
     <!-- 主区域 -->
     <div class="flex1 flex column">
       <!-- 头部栏 -->
-      <div style="height: 60px; z-index: 1" class="baiSe yinYing"></div>
+      <div style="height: 100px; z-index: 1; text-align: center;" class="baiSe yinYing">
+        <div style="color: white;">手动换行</div>
+        <!-- 打字机特效 -->
+        <!-- Element to contain animated typing -->
+        <span id="element" style="font-size: 40px;"></span>
+
+        <!-- Load library from the CDN -->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+        <!-- Setup and start animation! -->
+        <script>
+          var typed = new Typed('#element', {
+            strings: ['<i>欢迎来到</i> 安德超的秘密花园', '<i>Welcome</i> to ADC-Garden'],
+            startDelay: 300,
+            typeSpeed: 70,
+            cursorChar: '_',
+            loop: true,
+            backSpeed: 30,
+          });
+        </script>
+        <!--打字机特效结束 -->
+      </div>
       <!-- 内容区 -->
       <div style="overflow: auto" class="neiRong flex1 flex">
         <!-- 左区 -->
@@ -103,26 +140,26 @@
           <div class="flex shuJuQu">
             <!-- 数据块 -->
             <div 
-            style="height: 100px" 
+            style="height: 100px; text-align: center; line-height: 2.5; color: red;" 
             class="shuJu flex1 baiSe mgr8 yinYing"
-            ></div>
+            ><h2 class="blinking" >1</h2></div>
             <div 
-            style="height: 100px" 
+            style="height: 100px; text-align: center; line-height: 2.5; color: red;" 
             class="shuJu flex1 baiSe mgr8 yinYing"
-            ></div>
+            ><h2 class="blinking" >0</h2></div>
             <div 
-            style="height: 100px" 
+            style="height: 100px; text-align: center; line-height: 2.5; color: red;" 
             class="shuJu flex1 baiSe mgr8 yinYing"
-            ></div>
+            ><h2 class="blinking">2</h2></div>
             <div 
-            style="height: 100px" 
+            style="height: 100px; text-align: center; line-height: 2.5; color: red;" 
             class="shuJu flex1 baiSe yinYing"
-            ></div>
+            ><h2 class="blinking">4</h2></div>
           </div>
           <!-- 列表区 -->
           <div class="flex column">
             <!-- 列表项 -->
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 160px" class="baiSe mgt8 yinYing">等待更新...</div>
             <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
             <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
             <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
@@ -133,9 +170,22 @@
         <!-- 右区 -->
         <div style="flex: 1" class="youQu flex column mgr8 mgt8">
           <!-- 提示区 -->
-          <div style="height: 150px" class="baiSe yinYing"></div>
+          <div style="height: 150px" class="baiSe yinYing">
+            <div style="text-align: center;">今日诗词：</div>
+            <!-- 今日诗词API -->
+            <!-- <span id="jinrishici-sentence">正在加载今日诗词....</span> -->
+            <!-- <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script> -->
+            <div style="text-align: center;">百尺竿头须进步，十方世界是全身</div>
+            <div style="margin-top: 60px; text-align: center;">当您踏入这片数字之海，我满心欢喜，</div>
+            <div style="text-align: center;">感谢您的造访，愿诗与远方常伴您左右.</div>
+          </div>
           <!-- 消息区 -->
-          <div style="height: 300px" class="baiSe mgt8 yinYing"></div>
+          <div style="height: 350px;width: 400px;" class="baiSe mgt8 yinYing">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+            <div id="aplayer" class="aplayer" data-autoplay="true"  data-id="82450138" data-server="netease" data-type="playlist" data-fixed="false" data-listfolded="false" data-order="random" data-theme="#F4645F" ></div>
+            <script src="https://unpkg.com/meting@1.2.0/dist/Meting.min.js"></script>
+          </div>
         </div>
       </div>
     </div>
